@@ -12,9 +12,10 @@ function primeInRange(lower=0,higher)
             else
             {
                 console.log(j);
+                break;
             }
         }
     }
 }
 
-primeInRange(1,10);
+primeInRange(1,12);
