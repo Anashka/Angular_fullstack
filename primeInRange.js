@@ -1,6 +1,6 @@
-function primeInRange(lower=0,higher)
+function primeInRange(lower,higher)
 {
-    
+    //console.log("args",arguments);
     for(j=lower;j<higher;j++)
     {
         for(i=2;i<j/2;i++)
@@ -18,4 +18,4 @@ function primeInRange(lower=0,higher)
     }
 }
 
-primeInRange(1,12);
+primeInRange(1,17);

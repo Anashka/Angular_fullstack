@@ -1,16 +1,13 @@
 function isPrime(num)
 {
+    if(num<2)
+        return false;
     for(i=2;i<num/2;i++)
-    {
         if (num%i == 0)
-        {
-            console.log("false");
-            break;
-        }
-        else
-        {
-            console.log("true");
-        }
-    }
+            return false
+    return true;
+
 
 }
+console.log(isPrime(9));
+console.log(isPrime(1));
