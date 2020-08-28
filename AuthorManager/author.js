@@ -37,6 +37,46 @@ AuthorManager.prototype.getById=function(id){
     return null;
 };
 
+AuthorManager.prototype.searchBiography=function(biography){
+
+    let result=[];
+        
+
+    for(let author of this.authors){
+        if (contains(author.biography,biography))
+            result.push(author);
+    }
+
+    return result;
+
+}
+
+AuthorManager.prototype.searchByPartialName=function(name){
+    let result=[];
+        
+
+    for(let author of this.authors){
+        if (contains(author.name,name))
+            result.push(author);
+    }
+
+    return result;
+}
+
+AuthorManager.prototype.searchByMinBookCount=function(count){
+    let result=[];
+        
+
+    for(let author of this.authors){
+        if (author.books.length>=count)
+            result.push(author);
+
+    }
+
+    return result;
+}
+
+
 AuthorManager.prototype.remove=function(id){
 
     let newList=[];

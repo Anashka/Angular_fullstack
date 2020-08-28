@@ -45,8 +45,45 @@ BookManager.prototype.remove=function(id){
     this.books = newList;
 }
 
+BookManager.prototype.searchByTitle=function(title){
+
+    let result=[];
+        
+
+    for(let book of this.books){
+        if (contains(book.title,title))
+            result.push(book);
+    }
+
+    return result;
+
+}
+
+BookManager.prototype.searchByAuthor=function(author){
+
+    let result=[];
+        
+
+    for(let book of this.books){
+        if (contains(book.author,author))
+            result.push(book);
+    }
+
+    return result;
+
+}
+
+BookManager.prototype.updateBookById=function(id,book){
+
+    
+    for(let book of this.books)
+    if (book.id===id){
 
 
+        
+    }
+
+}
 
 
 function showBooks(books, heading=null){
