@@ -17,8 +17,17 @@ let BookManager=function(){
     this.books=[]; //an empty list of books;
 };
 
+//------------------------------------------
+/*let promise = new Promise(function(resolve, reject){
+    setTimeout(()=>{
+        if()
+            resolve
+    },2000);
+}*/
+//-----------------------------------------------------
 BookManager.prototype.addBook=function(book){
     if( book && book.id && book.title )
+        
         this.books.push(book);
 };
 
