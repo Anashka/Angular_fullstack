@@ -69,14 +69,14 @@ export class BookListComponent implements OnInit {
   }
 
   increaseSize(){
-    if(this.imageWidth >= 50 && this.imageWidth <=200)
+    if( this.imageWidth <=200)
       this.imageWidth = this.imageWidth + this.delta;
 
   }
 
   decreaseSize(){
 
-    if(this.imageWidth >= 50 && this.imageWidth <=200)
+    if(this.imageWidth >= 50)
       this.imageWidth = this.imageWidth - this.delta;
 
     
