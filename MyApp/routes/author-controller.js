@@ -75,11 +75,12 @@ async function editAuthorDetails(request,response){
     let id= request.params.authorId;
     
     let author=await authorService.getById(id);
+    console.log("author",author);
     await response.render('authors/edit',{author});
-
+    await authorService.remove(author.id);
    // var author=request.body;
     try{
-    await authorService.remove(author.id);
+ 
     await authorService.add(author);
     await response.redirect('/authors');
     }catch(e){
