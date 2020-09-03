@@ -7,7 +7,7 @@ import { Component } from "@angular/core";
     `
     <app-booksweb-header></app-booksweb-header>
     <div class='content container' >
-        <app-book-list></app-book-list>
+        <app-book-composite></app-book-composite>
     </div>
     <app-booksweb-footer></app-booksweb-footer>
     `

@@ -1,29 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import {Book} from '../service/book'; 
-import { RangeInfo } from '../ca-range/ca-range.component';
-
+import { Book } from '../service/book';
 
 @Component({
-  selector: 'app-book-list',
-  templateUrl: './book-list.component.html',
-  styleUrls: ['./book-list.component.css']
+  selector: 'app-book-composite',
+  templateUrl: './book-composite.component.html',
+  styleUrls: ['./book-composite.component.css']
 })
-export class BookListComponent implements OnInit {
+export class BookCompositeComponent implements OnInit {
 
-  public showImages=true;
-  public books: Book[];
-  public imageWidth=120;
-  
-  constructor() { 
+  public books: Book[];   //list of book will be used for the list pane
+  public selectedBook:Book;  //selected book will be used for details view
 
-  
-
-
-  }
-
-  toggleImages(){
-    this.showImages=!this.showImages;
-  }
+  constructor() { }
 
   ngOnInit(): void {
     this.books=[
@@ -72,17 +60,12 @@ export class BookListComponent implements OnInit {
         "tags": "classic, poetry, mahabharata, karna, hindi"
       },
     ];
+
+    this.selectedBook=this.books[0];
   }
 
-
- 
-  
-  
-  onImageWidthInfoChanged(r: RangeInfo){
-
-    console.log(r);
-    
+  selectBook(book:Book){
+    this.selectedBook=book;
   }
-  
 
 }

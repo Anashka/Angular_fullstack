@@ -6,9 +6,13 @@ import {BooksWebFooterComponent} from './books-web-footer.component';
 
 import { BookInfoComponent } from './book-info/book-info.component';
 import { BookListComponent } from './book-list/book-list.component';
-import { CaRangeComponent } from './ca-range/ca-range.component'; 
-import { RatingComponent } from './rating/rating.component'; 
+import { CaRangeComponent } from './ca-range/ca-range.component';
+import { CaRatingComponent } from './ca-rating/ca-rating.component';
+import { AltvaluePipe } from './altvalue.pipe';
+import { PrefixPipe } from './prefix.pipe';
 
+import { RatingadvisePipe } from './ratingadvise.pipe';
+import { BookCompositeComponent } from './book-composite/book-composite.component'; 
 
 
 
@@ -29,7 +33,20 @@ import { RatingComponent } from './rating/rating.component';
         BookListComponent,
         
         CaRangeComponent,
-        RatingComponent
+        
+        CaRatingComponent,
+        
+        AltvaluePipe,
+        
+        PrefixPipe,
+        
+        
+        
+        RatingadvisePipe,
+        
+        
+        
+        BookCompositeComponent
         
     ],    
     
