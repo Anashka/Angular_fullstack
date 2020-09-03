@@ -73,6 +73,7 @@ async function showAuthorDetails(request,response){
 async function editAuthorDetails(request,response){
 
     let id= request.params.authorId;
+    
     let author=await authorService.getById(id);
     await response.render('authors/edit',{author});
 
@@ -84,6 +85,8 @@ async function editAuthorDetails(request,response){
     }catch(e){
         console.log(e.message);
     }
+
+   
 
     
 

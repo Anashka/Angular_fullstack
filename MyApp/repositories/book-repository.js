@@ -75,7 +75,7 @@ class BookRepository{
 
     async remove(id){
        
-       await collection.deleteOne({id:id});
+       await this.collection.deleteOne({id:id});
     }
 
     save(){
