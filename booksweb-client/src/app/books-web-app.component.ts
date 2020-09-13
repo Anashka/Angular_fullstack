@@ -13,7 +13,14 @@ import { Component } from "@angular/core";
         
     </div>
     <app-booksweb-footer></app-booksweb-footer>
-    `
+    `,
+    styles:[
+        `
+        .content{
+            padding-bottom:50px;
+        }
+        `
+    ]
 })
 export class BooksWebAppComponent{
     

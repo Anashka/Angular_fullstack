@@ -1,0 +1,29 @@
+<h1>Authors</h1>
+
+
+<table class="table table-condensed table-striped table-hover"  >
+    <thead> 
+        <tr>
+            <th>Name</th>
+            <th>Biography</th>
+            <th>Photograph</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr  *ngFor='let author of authors' [routerLink]="['/author/details',author.name]" >
+
+            <td>{{author.name}}</td>
+            <td>{{author.biography}} </td>
+            <td>{{author.Photograph}}</td>
+            <td>{{author.email}}</td>
+        
+        </tr>
+      
+        
+    </tbody>
+</table>
+
+
+<hr/>
+<p class='tags'>Total authors: {{authors.length}}</p>

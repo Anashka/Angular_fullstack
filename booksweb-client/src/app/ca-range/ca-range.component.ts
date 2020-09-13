@@ -80,11 +80,7 @@ export class CaRangeComponent implements OnInit {
 
   ngOnInit(): void {
     this.change(this.value);
-    console.log('typeof(this.min)',typeof(this.min));
-    console.log('typeof(this.max)',typeof(this.max));
-    
-    
-    console.log('range:this.value',this.value);
+  
     
   }
 

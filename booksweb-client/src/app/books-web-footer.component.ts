@@ -12,6 +12,8 @@ import {Component} from '@angular/core'
                 background-color: blue;
                 color: white;
                 text-align: center;
+                margin-top: 150px;
+                
             }
         `
     ],

@@ -2,6 +2,8 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule} from '@angular/platform-browser';
 import {RouterModule} from '@angular/router'; 
+import {FormsModule} from '@angular/forms'; 
+
 
 
 
@@ -16,14 +18,28 @@ import { CaRangeComponent } from './ca-range/ca-range.component';
 import { CaRatingComponent } from './ca-rating/ca-rating.component';
 import { AltvaluePipe } from './altvalue.pipe';
 import { PrefixPipe } from './prefix.pipe';
-
+import { AddAuthorComponent } from './add-author/add-author.component';
 import { RatingadvisePipe } from './ratingadvise.pipe';
 import { BookCompositeComponent } from './book-composite/book-composite.component'; 
 
 //get the route details
 import {appRoutes} from './routes';
 import { CaNotFoundComponent } from './ca-not-found/ca-not-found.component';
-import { AddBookComponent } from './add-book/add-book.component'; 
+import { BookCreateComponent } from './book-create/book-create.component';
+import { BookDetailsComponent } from './book-details/book-details.component';
+import { CaHighlightDirective } from './ca-highlight.directive';
+import { CaRainbowColorDirective } from './ca-rainbow-color.directive'; 
+import { SimpleBookService } from './service/simple-book-service';
+import { SimpleAuthorService } from './service/simple-author-service';
+
+import {UserManagementModule} from './user-management/user-management.module';
+import { AuthorListComponent } from './author-list/author-list.component';
+import { AuthorDetailsComponent } from './author-details/author-details.component';
+import { AuthorInfoComponent } from './author-info/author-info.component';
+import { AuthorCompositeComponent } from './author-composite/author-composite.component';
+import { AuthorDeleteComponent } from './author-delete/author-delete.component';
+import { BookDeleteComponent } from './book-delete/book-delete.component'; 
+
 
 
 
@@ -32,9 +48,10 @@ import { AddBookComponent } from './add-book/add-book.component';
 
     imports:[
         BrowserModule,  //most important angular module to enable component rendering
-
+        FormsModule,
         //responsible for angular Single Page Routing design
         //You must load the RouterModule and supply the route information to be used
+        UserManagementModule, //all functinalities are included
         RouterModule.forRoot(appRoutes) 
     ],
 
@@ -55,24 +72,38 @@ import { AddBookComponent } from './add-book/add-book.component';
         
         PrefixPipe,
         
-        
-        
         RatingadvisePipe,
-        
-        
         
         BookCompositeComponent,
         
-        
-        
         CaNotFoundComponent,
         
+        BookCreateComponent,      
         
         
-        AddBookComponent
+        BookDetailsComponent,      
+        
+        
+        CaHighlightDirective,      
+        
+        
+        CaRainbowColorDirective,
+        AddAuthorComponent,
+        AuthorListComponent,
+        AuthorDetailsComponent,
+        AuthorInfoComponent,
+        AuthorCompositeComponent,
+        AuthorDeleteComponent,
+        BookDeleteComponent 
         
     ],    
     
+    //set of services for dependency injection
+    providers:[
+        SimpleBookService,
+        SimpleAuthorService
+    ],
+
     bootstrap:[  //startup compoent for the module
         BooksWebAppComponent   //only root component should be in bootstrap
     ]

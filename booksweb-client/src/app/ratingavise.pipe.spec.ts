@@ -1,8 +1,8 @@
-import { RatingavisePipe } from './ratingavise.pipe';
+import { RatingadvisePipe } from './ratingadvise.pipe';
 
-describe('RatingavisePipe', () => {
+xdescribe('RatingavisePipe', () => {
   it('create an instance', () => {
-    const pipe = new RatingavisePipe();
+    const pipe = new RatingadvisePipe();
     expect(pipe).toBeTruthy();
   });
 });
