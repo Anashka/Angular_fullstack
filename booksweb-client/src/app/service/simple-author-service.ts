@@ -14,33 +14,19 @@ export class SimpleAuthorService implements AuthorService{
 
         this.authors=this.authors=[
             {
-              "name": "vivek",
-              "biography": "xxxxx",
-              "photograph": "xxxxxxxx",
-              "email": "xxxxxxxx",
+              "name": "Chethan Bhagath",
+              "biography": "Indian Author",
+              "photograph": "photo_url",
+              "email": "chethan@gmail.com",
        
             },
             {
-                "name": "vivek",
-                "biography": "xxxxx",
-                "photograph": "xxxxxxxx",
-                "email": "xxxxxxxx",
+                "name": "V.S Khandekkar",
+                "biography": "Famous author who wrote yayathi",
+                "photograph": "photo_url",
+                "email": "khandekkar@outlook.com",
 
-            },
-            {
-                "name": "vivek",
-                "biography": "xxxxx",
-                "photograph": "xxxxxxxx",
-                "email": "xxxxxxxx",
-           
-            },
-            {
-                "name": "vivek",
-              "biography": "xxxxx",
-              "photograph": "xxxxxxxx",
-              "email": "xxxxxxxx",
-             
-            },
+            }
           ];
         
     }
